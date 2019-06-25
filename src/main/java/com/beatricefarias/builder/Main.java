@@ -1,8 +1,4 @@
-package java.com.beatricefarias;
-
-import java.com.beatricefarias.builder.Cat;
-import com.beatricefarias.CatFurColor;
-import com.beatricefarias.CatPersonality;
+package com.beatricefarias.builder;
 
 public class Main {
 

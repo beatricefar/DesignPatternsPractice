@@ -1,4 +1,4 @@
-package com.beatricefarias;
+package com.beatricefarias.builder;
 
 import com.sun.istack.internal.NotNull;
 

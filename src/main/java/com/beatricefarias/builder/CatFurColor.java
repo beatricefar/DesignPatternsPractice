@@ -1,4 +1,4 @@
-package com.beatricefarias;
+package com.beatricefarias.builder;
 
 public enum CatFurColor {
     WHITE,
