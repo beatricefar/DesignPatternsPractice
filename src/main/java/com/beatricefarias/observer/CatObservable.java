@@ -14,8 +14,8 @@ public class CatObservable implements Observable<String> {
 
     @Override
     public void notifyObservers() {
-        for (int i = 0; i < catObservers.size(); i++) {
-            catObservers.get(i).onDataAvailable(String.format("Mew %d!", i));
+        for (Observer<String> catObserver: catObservers) {
+            catObserver.onDataAvailable("Meow!");
         }
     }
 }

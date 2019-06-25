@@ -1,6 +1,6 @@
 package com.beatricefarias.observer;
 
-public class CatObserver implements Observer<String> {
+public class SimpleCatObserver implements Observer<String> {
 
     @Override
     public void onDataAvailable(String data) {
