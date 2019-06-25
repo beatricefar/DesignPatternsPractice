@@ -1,4 +1,10 @@
-package com.beatricefarias.builder;
+package com.beatricefarias;
+
+import com.beatricefarias.builder.Cat;
+import com.beatricefarias.builder.CatFurColor;
+import com.beatricefarias.builder.CatPersonality;
+import com.beatricefarias.observer.CatObservable;
+import com.beatricefarias.observer.CatObserver;
 
 public class Main {
 
@@ -14,6 +20,8 @@ public class Main {
                 cat.getFurColor(),
                 cat.getPersonality()
         );
+
+        observeTheKittens();
     }
 
     private static Cat createCat() {
@@ -23,6 +31,17 @@ public class Main {
                 .setFurColor(CatFurColor.GINGER)
                 .setPersonality(CatPersonality.PLAYFUL)
                 .build();
+    }
+
+    private static void observeTheKittens() {
+        CatObservable catObservable = new CatObservable();
+        CatObserver catObserver1 = new CatObserver();
+        CatObserver catObserver2 = new CatObserver();
+
+        catObservable.addObserver(catObserver1);
+        catObservable.addObserver(catObserver2);
+
+        catObservable.notifyObservers();
     }
 
 }
