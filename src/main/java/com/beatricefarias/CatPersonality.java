@@ -1,4 +1,4 @@
-package builder;
+package com.beatricefarias;
 
 public enum CatPersonality {
     CALM,

@@ -1,6 +1,7 @@
-package builder;
+package com.beatricefarias;
 
 import com.sun.istack.internal.NotNull;
+
 
 public class Cat {
 
