@@ -5,10 +5,13 @@ import com.beatricefarias.builder.CatFurColor;
 import com.beatricefarias.builder.CatPersonality;
 import com.beatricefarias.chainofresponsibility.LogManager;
 import com.beatricefarias.chainofresponsibility.LogType;
+import com.beatricefarias.decorator.*;
 import com.beatricefarias.facade.*;
 import com.beatricefarias.observer.CatObservable;
 import com.beatricefarias.observer.SimpleCatObserver;
 import com.beatricefarias.observer.SophisticatedCatObserver;
+
+import java.util.List;
 
 public class Main {
 
@@ -30,6 +33,8 @@ public class Main {
         logMessages();
 
         buyBooks();
+
+        makeIceCream();
     }
 
     private static Cat createCat() {
@@ -65,6 +70,15 @@ public class Main {
 
         System.out.format("Book count: %d", booksCalculation.getBookCount());
         System.out.format("Books cost: %.2f", booksCalculation.getTotalPrice());
+    }
+
+    private static void makeIceCream() {
+        IceCream iceCream = new Strawberries(new Oreo(new VanillaIceCream(ScoopCount.ONE)));
+        List<Ingredient> ingredients = iceCream.getIngredients();
+        for (Ingredient ingredient: ingredients) {
+            System.out.println(ingredient.getDescription());
+        }
+
     }
 
 }
